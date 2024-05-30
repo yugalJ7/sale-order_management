@@ -1,7 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import { Flex, Button, Box, Text } from "@chakra-ui/react";
+import SalesModal from "./SalesModal";
 
 const Topbar = () => {
+  const [showModal, setShowModal] = useState(false);
+
   return (
     <>
       <Flex width="90%" mt={4} justifyContent="space-between">
@@ -29,10 +32,12 @@ const Topbar = () => {
           backgroundColor="#327695"
           variant="solid"
           _hover={{ color: "#327695", bg: "#CBE0EA" }}
+          onClick={() => setShowModal(true)}
         >
           + Sales Orders
         </Button>
       </Flex>
+      {showModal && <SalesModal setShowModal={setShowModal} />}
     </>
   );
 };

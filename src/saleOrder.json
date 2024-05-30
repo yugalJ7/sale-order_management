@@ -1,0 +1,30 @@
+{
+  "saleOrderSchema": [
+    {
+      "customer_id": 11908,
+      "items": [
+        {
+          "sku_id": 220,
+          "price": 12,
+          "quantity": 12
+        }
+      ],
+      "paid": false,
+      "invoice_no": "Invoice - 1212121",
+      "invoice_date": "7/5/2024"
+    },
+    {
+      "customer_id": 15903,
+      "items": [
+        {
+          "sku_id": 328,
+          "price": 9,
+          "quantity": 54
+        }
+      ],
+      "paid": false,
+      "invoice_no": "Invoice - 1616171",
+      "invoice_date": "4/5/2024"
+    }
+  ]
+}

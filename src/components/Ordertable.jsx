@@ -2,19 +2,28 @@ import {
   Table,
   Thead,
   Tbody,
-  Tfoot,
   Tr,
   Th,
   Td,
-  TableCaption,
   TableContainer,
-  Center,
   Flex,
 } from "@chakra-ui/react";
 import { PiDotsThreeOutlineFill } from "react-icons/pi";
 import { MdOutlineCurrencyRupee } from "react-icons/md";
+import { useQuery } from "@tanstack/react-query";
+import CustomerName from "./CustomerName";
 
 const Ordertable = () => {
+  const { isPending, error, data } = useQuery({
+    queryKey: ["salesOrder"],
+    queryFn: () =>
+      fetch("http://localhost:3030/saleOrderSchema").then((res) => res.json()),
+  });
+
+  if (isPending) return "Loading...";
+
+  if (error) return "An error has occurred: " + error.message;
+
   return (
     <TableContainer boxShadow="sm" width="90%" mt={4}>
       <Table variant="simple">
@@ -33,33 +42,19 @@ const Ordertable = () => {
           </Tr>
         </Thead>
         <Tbody>
-          <Tr>
-            <Td>1</Td>
-            <Td>millimetres</Td>
-            <Td>25.4</Td>
-            <Td>25/4/2023</Td>
-            <Td>
-              <PiDotsThreeOutlineFill />
-            </Td>
-          </Tr>
-          <Tr>
-            <Td>2</Td>
-            <Td>centimetre</Td>
-            <Td>30.48</Td>
-            <Td>25/4/2023</Td>
-            <Td>
-              <PiDotsThreeOutlineFill />
-            </Td>
-          </Tr>
-          <Tr>
-            <Td>3</Td>
-            <Td>metres</Td>
-            <Td>0.91444</Td>
-            <Td>25/4/2023</Td>
-            <Td>
-              <PiDotsThreeOutlineFill />
-            </Td>
-          </Tr>
+          {data.map((order) => {
+            return (
+              <Tr key={order.id}>
+                <Td>{order.customer_id}</Td>
+                <CustomerName userIdFromOrder={order.customer_id} />
+                <Td>{order.items.map((price) => price.price)}</Td>
+                <Td>{order.invoice_date}</Td>
+                <Td>
+                  <PiDotsThreeOutlineFill />
+                </Td>
+              </Tr>
+            );
+          })}
         </Tbody>
       </Table>
     </TableContainer>
