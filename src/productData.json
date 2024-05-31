@@ -1,0 +1,333 @@
+{
+  "productSchema": [
+    {
+      "id": 209,
+      "display_id": 8,
+      "owner": 1079,
+      "name": "New Product",
+      "category": "The god of War",
+      "characteristics": "New Product Characteristics",
+      "features": "",
+      "brand": "New Product Brand",
+      "sku": [
+        {
+          "id": 248,
+          "selling_price": 54,
+          "max_retail_price": 44,
+          "amount": 33,
+          "unit": "kg",
+          "quantity_in_inventory": 0,
+          "product": 209
+        },
+        {
+          "id": 247,
+          "selling_price": 32,
+          "max_retail_price": 32,
+          "amount": 33,
+          "unit": "kg",
+          "quantity_in_inventory": 0,
+          "product": 209
+        },
+        {
+          "id": 246,
+          "selling_price": 23,
+          "max_retail_price": 21,
+          "amount": 22,
+          "unit": "kg",
+          "quantity_in_inventory": 1,
+          "product": 209
+        }
+      ],
+      "updated_on": "2024-05-24T12:46:41.995873Z",
+      "adding_date": "2024-05-24T12:46:41.995828Z"
+    },
+    {
+      "id": 210,
+      "display_id": 9,
+      "owner": 1080,
+      "name": "Stylish T-Shirt",
+      "category": "Clothes",
+      "characteristics": "Cotton, Round Neck",
+      "features": "Breathable, Lightweight",
+      "brand": "Fashion Brand",
+      "sku": [
+        {
+          "id": 249,
+          "selling_price": 25,
+          "max_retail_price": 30,
+          "amount": 1,
+          "unit": "piece",
+          "quantity_in_inventory": 50,
+          "product": 210
+        },
+        {
+          "id": 250,
+          "selling_price": 27,
+          "max_retail_price": 32,
+          "amount": 1,
+          "unit": "piece",
+          "quantity_in_inventory": 30,
+          "product": 210
+        }
+      ],
+      "updated_on": "2024-05-24T12:50:00.000Z",
+      "adding_date": "2024-05-24T12:50:00.000Z"
+    },
+    {
+      "id": 211,
+      "display_id": 10,
+      "owner": 1081,
+      "name": "Ceramic Mug",
+      "category": "Mugs",
+      "characteristics": "White, 300ml",
+      "features": "Microwave Safe, Dishwasher Safe",
+      "brand": "MugCo",
+      "sku": [
+        {
+          "id": 251,
+          "selling_price": 10,
+          "max_retail_price": 12,
+          "amount": 1,
+          "unit": "piece",
+          "quantity_in_inventory": 100,
+          "product": 211
+        },
+        {
+          "id": 252,
+          "selling_price": 11,
+          "max_retail_price": 13,
+          "amount": 1,
+          "unit": "piece",
+          "quantity_in_inventory": 80,
+          "product": 211
+        }
+      ],
+      "updated_on": "2024-05-24T12:55:00.000Z",
+      "adding_date": "2024-05-24T12:55:00.000Z"
+    },
+    {
+      "id": 212,
+      "display_id": 11,
+      "owner": 1082,
+      "name": "Running Shoes",
+      "category": "Shoes",
+      "characteristics": "Size 10, Black",
+      "features": "Non-Slip, Lightweight",
+      "brand": "RunFast",
+      "sku": [
+        {
+          "id": 253,
+          "selling_price": 60,
+          "max_retail_price": 70,
+          "amount": 1,
+          "unit": "pair",
+          "quantity_in_inventory": 20,
+          "product": 212
+        },
+        {
+          "id": 254,
+          "selling_price": 62,
+          "max_retail_price": 72,
+          "amount": 1,
+          "unit": "pair",
+          "quantity_in_inventory": 15,
+          "product": 212
+        }
+      ],
+      "updated_on": "2024-05-24T13:00:00.000Z",
+      "adding_date": "2024-05-24T13:00:00.000Z"
+    },
+    {
+      "id": 213,
+      "display_id": 12,
+      "owner": 1083,
+      "name": "Leather Wallet",
+      "category": "Accessories",
+      "characteristics": "Brown, Bifold",
+      "features": "Genuine Leather, RFID Blocking",
+      "brand": "WalletPro",
+      "sku": [
+        {
+          "id": 255,
+          "selling_price": 45,
+          "max_retail_price": 50,
+          "amount": 1,
+          "unit": "piece",
+          "quantity_in_inventory": 40,
+          "product": 213
+        },
+        {
+          "id": 256,
+          "selling_price": 48,
+          "max_retail_price": 53,
+          "amount": 1,
+          "unit": "piece",
+          "quantity_in_inventory": 25,
+          "product": 213
+        }
+      ],
+      "updated_on": "2024-05-24T13:05:00.000Z",
+      "adding_date": "2024-05-24T13:05:00.000Z"
+    },
+    {
+      "id": 214,
+      "display_id": 13,
+      "owner": 1084,
+      "name": "Smartphone",
+      "category": "Electronics",
+      "characteristics": "6.5-inch Display, 128GB Storage",
+      "features": "5G, Dual Camera",
+      "brand": "TechBrand",
+      "sku": [
+        {
+          "id": 257,
+          "selling_price": 699,
+          "max_retail_price": 799,
+          "amount": 1,
+          "unit": "piece",
+          "quantity_in_inventory": 50,
+          "product": 214
+        },
+        {
+          "id": 258,
+          "selling_price": 749,
+          "max_retail_price": 849,
+          "amount": 1,
+          "unit": "piece",
+          "quantity_in_inventory": 30,
+          "product": 214
+        }
+      ],
+      "updated_on": "2024-05-24T13:10:00.000Z",
+      "adding_date": "2024-05-24T13:10:00.000Z"
+    },
+    {
+      "id": 215,
+      "display_id": 14,
+      "owner": 1085,
+      "name": "Novel Book",
+      "category": "Books",
+      "characteristics": "Hardcover, 300 Pages",
+      "features": "Bestseller, Award-Winning Author",
+      "brand": "BookHouse",
+      "sku": [
+        {
+          "id": 259,
+          "selling_price": 20,
+          "max_retail_price": 25,
+          "amount": 1,
+          "unit": "piece",
+          "quantity_in_inventory": 100,
+          "product": 215
+        },
+        {
+          "id": 260,
+          "selling_price": 18,
+          "max_retail_price": 23,
+          "amount": 1,
+          "unit": "piece",
+          "quantity_in_inventory": 80,
+          "product": 215
+        }
+      ],
+      "updated_on": "2024-05-24T13:15:00.000Z",
+      "adding_date": "2024-05-24T13:15:00.000Z"
+    },
+    {
+      "id": 216,
+      "display_id": 15,
+      "owner": 1086,
+      "name": "Decorative Vase",
+      "category": "Home Decor",
+      "characteristics": "Ceramic, 10-inch Height",
+      "features": "Hand-Painted, Eco-Friendly",
+      "brand": "HomeStyle",
+      "sku": [
+        {
+          "id": 261,
+          "selling_price": 40,
+          "max_retail_price": 50,
+          "amount": 1,
+          "unit": "piece",
+          "quantity_in_inventory": 60,
+          "product": 216
+        },
+        {
+          "id": 262,
+          "selling_price": 45,
+          "max_retail_price": 55,
+          "amount": 1,
+          "unit": "piece",
+          "quantity_in_inventory": 40,
+          "product": 216
+        }
+      ],
+      "updated_on": "2024-05-24T13:20:00.000Z",
+      "adding_date": "2024-05-24T13:20:00.000Z"
+    },
+    {
+      "id": 217,
+      "display_id": 16,
+      "owner": 1087,
+      "name": "Blender",
+      "category": "Kitchen Appliances",
+      "characteristics": "500W, 2-Speed",
+      "features": "Stainless Steel Blades, BPA-Free",
+      "brand": "KitchenPro",
+      "sku": [
+        {
+          "id": 263,
+          "selling_price": 60,
+          "max_retail_price": 75,
+          "amount": 1,
+          "unit": "piece",
+          "quantity_in_inventory": 50,
+          "product": 217
+        },
+        {
+          "id": 264,
+          "selling_price": 65,
+          "max_retail_price": 80,
+          "amount": 1,
+          "unit": "piece",
+          "quantity_in_inventory": 30,
+          "product": 217
+        }
+      ],
+      "updated_on": "2024-05-24T13:25:00.000Z",
+      "adding_date": "2024-05-24T13:25:00.000Z"
+    },
+    {
+      "id": 218,
+      "display_id": 17,
+      "owner": 1088,
+      "name": "Yoga Mat",
+      "category": "Sports Equipment",
+      "characteristics": "6mm Thickness, Non-Slip",
+      "features": "Eco-Friendly, Lightweight",
+      "brand": "Sporty",
+      "sku": [
+        {
+          "id": 265,
+          "selling_price": 30,
+          "max_retail_price": 35,
+          "amount": 1,
+          "unit": "piece",
+          "quantity_in_inventory": 100,
+          "product": 218
+        },
+        {
+          "id": 266,
+          "selling_price": 32,
+          "max_retail_price": 37,
+          "amount": 1,
+          "unit": "piece",
+          "quantity_in_inventory": 80,
+          "product": 218
+        }
+      ],
+      "updated_on": "2024-05-24T13:30:00.000Z",
+      "adding_date": "2024-05-24T13:30:00.000Z"
+    }
+  ]
+}
