@@ -12,12 +12,14 @@ import { PiDotsThreeOutlineFill } from "react-icons/pi";
 import { MdOutlineCurrencyRupee } from "react-icons/md";
 import { useQuery } from "@tanstack/react-query";
 import CustomerName from "./CustomerName";
+import { useEffect } from "react";
 
 const Ordertable = () => {
   const { isPending, error, data } = useQuery({
     queryKey: ["salesOrder"],
     queryFn: () =>
       fetch("http://localhost:3030/saleOrderSchema").then((res) => res.json()),
+    refetchInterval: 1000,
   });
 
   if (isPending) return "Loading...";
@@ -42,12 +44,12 @@ const Ordertable = () => {
           </Tr>
         </Thead>
         <Tbody>
-          {data.map((order) => {
+          {data?.map((order) => {
             return (
               <Tr key={order.id}>
                 <Td>{order.customer_id}</Td>
-                <CustomerName userIdFromOrder={order.customer_id} />
-                <Td>{order.items.map((price) => price.price)}</Td>
+                <CustomerName userIdFromOrder={order?.customer_id} />
+                <Td>{order?.items?.map((price) => price.price)}</Td>
                 <Td>{order.invoice_date}</Td>
                 <Td>
                   <PiDotsThreeOutlineFill />

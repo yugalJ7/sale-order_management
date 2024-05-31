@@ -6,9 +6,30 @@ import Searchbar from "./formComponents/Searchbar";
 import TransactionalData from "./formComponents/TransactionalData";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
+import { useForm } from "react-hook-form";
+import { useMutation } from "@tanstack/react-query";
 
 const SalesModal = ({ setShowModal }) => {
-  const [startDate, setStartDate] = useState(new Date());
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm();
+
+  const onSubmit = (data) => {
+    console.log(data);
+    mutate(data);
+    setShowModal(false);
+  };
+
+  const { mutate } = useMutation({
+    mutationFn: (newOrder) =>
+      fetch("http://localhost:3030/saleOrderSchema", {
+        method: "POST",
+        body: JSON.stringify(newOrder),
+      }).then((res) => res.json()),
+  });
+
   return (
     <Box
       position="fixed"
@@ -27,7 +48,7 @@ const SalesModal = ({ setShowModal }) => {
         />
         <Box
           height="50rem"
-          backgroundColor="#F1F7FA"
+          // backgroundColor="white"
           overflowX="scroll"
           padding={5}
         >
@@ -43,11 +64,31 @@ const SalesModal = ({ setShowModal }) => {
           <Text mt={5} fontSize="xl">
             Transactional Details
           </Text>
-          <TransactionalData />
-          <DatePicker
-            selected={startDate}
-            onChange={(date) => setStartDate(date)}
-          />
+          <form onSubmit={handleSubmit(onSubmit)}>
+            <input
+              type="text"
+              placeholder="First Name"
+              {...register("customer_id")}
+            />
+            <hr />
+            <p>Paid</p>
+            <input type="checkbox" placeholder="paid" {...register("paid")} />
+            <hr />
+            <input
+              type="datetime"
+              placeholder="Invoice Date"
+              {...register("invoice_date")}
+            />
+            <input type="submit" />
+          </form>
+          {/* <TransactionalData
+            formData={formData}
+            handleChange={handleChange}
+            setFormData={setFormData}
+            startDate={startDate}
+            setStartDate={setStartDate}
+            handleSubmit={handleSubmit}
+          /> */}
         </Box>
       </Box>
     </Box>

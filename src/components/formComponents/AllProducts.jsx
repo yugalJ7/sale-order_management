@@ -12,7 +12,10 @@ const AllProducts = () => {
     <Grid templateColumns="repeat(3, 1fr)" gap={6} mt={5}>
       {products?.map((data) => {
         return (
-          <Box key={data.id} backgroundColor="white">
+          <Box
+            key={data.id}
+            // backgroundColor="white"
+          >
             <Checkbox size="md" colorScheme="green"></Checkbox>
             <Text>{data.name}</Text>
             <Text>{data.category}</Text>
