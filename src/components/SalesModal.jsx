@@ -8,15 +8,25 @@ import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import { useForm } from "react-hook-form";
 import { useMutation } from "@tanstack/react-query";
+import SelectedProduct from "./formComponents/SelectedProduct";
 
 const SalesModal = ({ setShowModal }) => {
+  const [selectItems, setSelectItems] = useState([]);
   const {
     register,
     handleSubmit,
     formState: { errors },
   } = useForm();
 
+  const skuArray = new Array();
+
+  selectItems.map((product) => {
+    console.log(skuArray);
+    skuArray.push(product.sku);
+  });
+
   const onSubmit = (data) => {
+    data.items = skuArray;
     console.log(data);
     mutate(data);
     setShowModal(false);
@@ -57,10 +67,14 @@ const SalesModal = ({ setShowModal }) => {
           <Text mt={5} fontSize="xl">
             Selected Product
           </Text>
+          <SelectedProduct selectItems={selectItems} />
           <Text mt={5} fontSize="xl">
             All Product
           </Text>
-          <AllProducts />
+          <AllProducts
+            selectItems={selectItems}
+            setSelectItems={setSelectItems}
+          />
           <Text mt={5} fontSize="xl">
             Transactional Details
           </Text>

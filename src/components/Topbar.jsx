@@ -1,15 +1,20 @@
 import React, { useState } from "react";
 import { Flex, Button, Box, Text } from "@chakra-ui/react";
 import SalesModal from "./SalesModal";
+import { UserButton, useClerk } from "@clerk/clerk-react";
 
 const Topbar = () => {
   const [showModal, setShowModal] = useState(false);
+  const { user } = useClerk();
 
   return (
     <>
       <Flex width="90%" mt={4} justifyContent="space-between">
         <Text fontSize="3xl">Sale Order Management</Text>
-        <Text>Monkey D. Luffy</Text>
+        <Flex alignItems="center" gap={2}>
+          <UserButton />
+          <Text>{user.fullName ? user.fullName : "User"}</Text>
+        </Flex>
       </Flex>
 
       <Flex justifyContent="space-between" width="90%">

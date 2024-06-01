@@ -49,7 +49,7 @@ const Ordertable = () => {
               <Tr key={order.id}>
                 <Td>{order.customer_id}</Td>
                 <CustomerName userIdFromOrder={order?.customer_id} />
-                <Td>{order?.items?.map((price) => price.price)}</Td>
+                <Td>{order?.items[0][0]?.selling_price}</Td>
                 <Td>{order.invoice_date}</Td>
                 <Td>
                   <PiDotsThreeOutlineFill />

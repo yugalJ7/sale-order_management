@@ -3,11 +3,13 @@
     {
       "customer_id": 11908,
       "items": [
-        {
-          "sku_id": 220,
-          "price": 12,
-          "quantity": 12
-        }
+        [
+          {
+            "sku_id": 220,
+            "selling_price": 12,
+            "quantity": 12
+          }
+        ]
       ],
       "paid": false,
       "invoice_no": "Invoice - 1212121",
@@ -17,11 +19,13 @@
     {
       "customer_id": 15903,
       "items": [
-        {
-          "sku_id": 328,
-          "price": 9,
-          "quantity": 54
-        }
+        [
+          {
+            "sku_id": 328,
+            "selling_price": 9,
+            "quantity": 54
+          }
+        ]
       ],
       "paid": false,
       "invoice_no": "Invoice - 1616171",
@@ -29,10 +33,61 @@
       "id": "86f0"
     },
     {
-      "id": "cdbb",
-      "customer_id": "11908",
+      "id": "110d",
+      "customer_id": "6969",
       "paid": true,
-      "invoice_date": "13/4/2024"
+      "invoice_date": "13/4/2024",
+      "items": [
+        [
+          {
+            "id": 248,
+            "selling_price": 54,
+            "max_retail_price": 44,
+            "amount": 33,
+            "unit": "kg",
+            "quantity_in_inventory": 0,
+            "product": 209
+          },
+          {
+            "id": 247,
+            "selling_price": 32,
+            "max_retail_price": 32,
+            "amount": 33,
+            "unit": "kg",
+            "quantity_in_inventory": 0,
+            "product": 209
+          },
+          {
+            "id": 246,
+            "selling_price": 23,
+            "max_retail_price": 21,
+            "amount": 22,
+            "unit": "kg",
+            "quantity_in_inventory": 1,
+            "product": 209
+          }
+        ],
+        [
+          {
+            "id": 249,
+            "selling_price": 25,
+            "max_retail_price": 30,
+            "amount": 1,
+            "unit": "piece",
+            "quantity_in_inventory": 50,
+            "product": 210
+          },
+          {
+            "id": 250,
+            "selling_price": 27,
+            "max_retail_price": 32,
+            "amount": 1,
+            "unit": "piece",
+            "quantity_in_inventory": 30,
+            "product": 210
+          }
+        ]
+      ]
     }
   ]
 }
