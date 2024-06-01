@@ -3,8 +3,7 @@ import { Flex, Button, Box, Text } from "@chakra-ui/react";
 import SalesModal from "./SalesModal";
 import { UserButton, useClerk } from "@clerk/clerk-react";
 
-const Topbar = () => {
-  const [showModal, setShowModal] = useState(false);
+const Topbar = ({ createModal, setCreateModal }) => {
   const { user } = useClerk();
 
   return (
@@ -37,12 +36,14 @@ const Topbar = () => {
           backgroundColor="#327695"
           variant="solid"
           _hover={{ color: "#327695", bg: "#CBE0EA" }}
-          onClick={() => setShowModal(true)}
+          onClick={() => setCreateModal(true)}
         >
           + Sales Orders
         </Button>
       </Flex>
-      {showModal && <SalesModal setShowModal={setShowModal} />}
+      {createModal && (
+        <SalesModal createModal={createModal} setCreateModal={setCreateModal} />
+      )}
     </>
   );
 };

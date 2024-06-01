@@ -6,15 +6,15 @@ import {
   AccordionPanel,
   AccordionIcon,
   Box,
-  Grid,
 } from "@chakra-ui/react";
 
 const SelectedProduct = ({ selectItems }) => {
+  console.log(selectItems);
   return (
     <Accordion defaultIndex={[0]} mt={5} allowMultiple>
       {selectItems.map((data) => {
         return (
-          <AccordionItem>
+          <AccordionItem key={data.id}>
             <h2>
               <AccordionButton>
                 <Box as="span" flex="1" textAlign="left">

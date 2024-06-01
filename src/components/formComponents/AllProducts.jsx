@@ -1,7 +1,8 @@
 import { Text, Box, Grid, Checkbox, useColorModeValue } from "@chakra-ui/react";
 import { useQuery } from "@tanstack/react-query";
+import { useEffect } from "react";
 
-const AllProducts = ({ selectItems, setSelectItems }) => {
+const AllProducts = ({ selectItems, setSelectItems, setSelectedItem }) => {
   const { data: products } = useQuery({
     queryKey: ["products"],
     queryFn: () =>
@@ -22,7 +23,6 @@ const AllProducts = ({ selectItems, setSelectItems }) => {
 
   const productCard = useColorModeValue("#9CC2D4", "#2D6985");
 
-  console.log(selectItems);
   return (
     <Grid templateColumns="repeat(3, 1fr)" gap={6} mt={5}>
       {products?.map((data) => {
