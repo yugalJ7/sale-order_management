@@ -88,6 +88,110 @@
           }
         ]
       ]
+    },
+    {
+      "id": "027f",
+      "customer_id": "34545",
+      "paid": true,
+      "invoice_date": "13/4/2024",
+      "items": [
+        [
+          {
+            "id": 263,
+            "selling_price": 60,
+            "max_retail_price": 75,
+            "amount": 1,
+            "unit": "piece",
+            "quantity_in_inventory": 50,
+            "product": 217
+          },
+          {
+            "id": 264,
+            "selling_price": 65,
+            "max_retail_price": 80,
+            "amount": 1,
+            "unit": "piece",
+            "quantity_in_inventory": 30,
+            "product": 217
+          }
+        ]
+      ]
+    },
+    {
+      "id": "a8a4",
+      "customer_id": "11304",
+      "paid": true,
+      "invoice_date": "13/4/2024",
+      "items": [
+        [
+          {
+            "id": 261,
+            "selling_price": 40,
+            "max_retail_price": 50,
+            "amount": 1,
+            "unit": "piece",
+            "quantity_in_inventory": 60,
+            "product": 216
+          },
+          {
+            "id": 262,
+            "selling_price": 45,
+            "max_retail_price": 55,
+            "amount": 1,
+            "unit": "piece",
+            "quantity_in_inventory": 40,
+            "product": 216
+          }
+        ]
+      ]
+    },
+    {
+      "id": "126b",
+      "customer_id": "111",
+      "paid": true,
+      "invoice_date": "13/4/2024",
+      "items": [
+        [
+          {
+            "id": 249,
+            "selling_price": 25,
+            "max_retail_price": 30,
+            "amount": 1,
+            "unit": "piece",
+            "quantity_in_inventory": 50,
+            "product": 210
+          },
+          {
+            "id": 250,
+            "selling_price": 27,
+            "max_retail_price": 32,
+            "amount": 1,
+            "unit": "piece",
+            "quantity_in_inventory": 30,
+            "product": 210
+          }
+        ],
+        [
+          {
+            "id": 255,
+            "selling_price": 45,
+            "max_retail_price": 50,
+            "amount": 1,
+            "unit": "piece",
+            "quantity_in_inventory": 40,
+            "product": 213
+          },
+          {
+            "id": 256,
+            "selling_price": 48,
+            "max_retail_price": 53,
+            "amount": 1,
+            "unit": "piece",
+            "quantity_in_inventory": 25,
+            "product": 213
+          }
+        ]
+      ]
     }
   ]
 }

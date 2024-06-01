@@ -1,59 +1,48 @@
-import {
-  FormControl,
-  FormLabel,
-  FormErrorMessage,
-  FormHelperText,
-  Input,
-  Radio,
-  HStack,
-  RadioGroup,
-  Button,
-} from "@chakra-ui/react";
+import { Input, Button, Flex, Box, Text } from "@chakra-ui/react";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 
-const TransactionalData = ({
-  formData,
-  handleChange,
-  setFormData,
-  startDate,
-  setStartDate,
-  handleSubmit,
-}) => {
+const TransactionalData = ({ onSubmit, register, handleSubmit }) => {
   return (
     <>
-      <FormControl isRequired>
-        <FormLabel>Customer ID</FormLabel>
+      <form onSubmit={handleSubmit(onSubmit)}>
+        <Text mb={2} fontSize="md">
+          Customer Id
+        </Text>
         <Input
-          value={formData.customerId}
-          name="customerId"
-          onChange={handleChange}
+          required
+          type="text"
+          placeholder="Customer Id"
+          {...register("customer_id")}
         />
-      </FormControl>
-      <FormControl as="fieldset">
-        <FormLabel as="legend">Amount Paid</FormLabel>
-        <RadioGroup defaultValue="true" name="paid" onChange={handleChange}>
-          <HStack spacing="24px">
-            <Radio value="true">Paid</Radio>
-            <Radio value="false">Later</Radio>
-          </HStack>
-        </RadioGroup>
-      </FormControl>
-      <DatePicker
-        selected={startDate}
-        onChange={(date) => setStartDate(date)}
-      />
-      <Button
-        mt={4}
-        color="white"
-        backgroundColor="#327695"
-        variant="solid"
-        _hover={{ color: "#327695", bg: "#CBE0EA" }}
-        onChange={handleSubmit}
-        type="submit"
-      >
-        Submit
-      </Button>
+
+        <Flex my={5} alignContent="center" gap={2}>
+          <Text fontSize="md">Amount paid</Text>
+          <input type="checkbox" placeholder="paid" {...register("paid")} />
+        </Flex>
+        {/* <Input type="checkbox" placeholder="paid" {...register("paid")} /> */}
+
+        <Text mb={2} fontSize="md">
+          Invoice Date
+        </Text>
+        <Input
+          required
+          type="datetime"
+          placeholder="Invoice Date"
+          {...register("invoice_date")}
+        />
+        <Box mt={5} display="flex" alignItems="center" justifyContent="center">
+          <Button
+            type="submit"
+            color="white"
+            backgroundColor="#327695"
+            variant="solid"
+            _hover={{ color: "#327695", bg: "#CBE0EA" }}
+          >
+            Submit
+          </Button>
+        </Box>
+      </form>
     </>
   );
 };

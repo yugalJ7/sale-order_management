@@ -1,4 +1,4 @@
-import { Box, Text } from "@chakra-ui/react";
+import { Box, Text, useColorModeValue } from "@chakra-ui/react";
 import React, { useState } from "react";
 import { CloseIcon } from "@chakra-ui/icons";
 import AllProducts from "./formComponents/AllProducts";
@@ -6,6 +6,7 @@ import Searchbar from "./formComponents/Searchbar";
 import { useForm } from "react-hook-form";
 import { useMutation } from "@tanstack/react-query";
 import SelectedProduct from "./formComponents/SelectedProduct";
+import TransactionalData from "./formComponents/TransactionalData";
 
 const SalesModal = ({ setShowModal }) => {
   // Array which contain selected product from all product
@@ -41,6 +42,8 @@ const SalesModal = ({ setShowModal }) => {
       }).then((res) => res.json()),
   });
 
+  const bg = useColorModeValue("#F4F9FB", "#1E4659");
+
   return (
     <Box
       position="fixed"
@@ -57,7 +60,7 @@ const SalesModal = ({ setShowModal }) => {
           onClick={() => setShowModal(false)}
           cursor="pointer"
         />
-        <Box height="50rem" overflowX="scroll" padding={5}>
+        <Box height="50rem" overflowX="scroll" padding={5} bg={bg}>
           <Text fontSize="3xl">Sales Order Form</Text>
           <Searchbar />
           <Text mt={5} fontSize="xl">
@@ -71,26 +74,14 @@ const SalesModal = ({ setShowModal }) => {
             selectItems={selectItems}
             setSelectItems={setSelectItems}
           />
-          <Text mt={5} fontSize="xl">
+          <Text my={5} fontSize="2xl">
             Transactional Details
           </Text>
-          <form onSubmit={handleSubmit(onSubmit)}>
-            <input
-              type="text"
-              placeholder="First Name"
-              {...register("customer_id")}
-            />
-            <hr />
-            <p>Paid</p>
-            <input type="checkbox" placeholder="paid" {...register("paid")} />
-            <hr />
-            <input
-              type="datetime"
-              placeholder="Invoice Date"
-              {...register("invoice_date")}
-            />
-            <input type="submit" />
-          </form>
+          <TransactionalData
+            handleSubmit={handleSubmit}
+            register={register}
+            onSubmit={onSubmit}
+          />
         </Box>
       </Box>
     </Box>
