@@ -1,6 +1,4 @@
-import React from "react";
 import Ordertable from "../components/Ordertable";
-
 import Topbar from "../components/Topbar";
 import { Flex } from "@chakra-ui/react";
 

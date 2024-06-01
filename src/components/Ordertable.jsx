@@ -12,7 +12,6 @@ import { PiDotsThreeOutlineFill } from "react-icons/pi";
 import { MdOutlineCurrencyRupee } from "react-icons/md";
 import { useQuery } from "@tanstack/react-query";
 import CustomerName from "./CustomerName";
-import { useEffect } from "react";
 
 const Ordertable = () => {
   const { isPending, error, data } = useQuery({
